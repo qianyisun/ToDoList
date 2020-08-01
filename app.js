@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static("public"));
-//本地在Public的能工作到网页上
+
 
 app.get("/", function(req, res) {
 
@@ -94,7 +94,7 @@ app.post("/",function(req,res){
 
 
 
-  //会返回到上面的get指令，再跑一次这里的参数
+
 });
 
 app.get("/work", function(req,res){
