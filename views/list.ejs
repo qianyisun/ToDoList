@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="box" id = "heading">
+    <h1> <%= listTitle%> </h1>
+  </div>
+
+
+<div class="box">
+    <!-- <li> newListItem</li> -->
+  <% for (var i=0; i<newListItems.length; i++){ %>
+    <div class="item">
+      <input type="checkbox">
+          <p><%=  newListItems[i]%> </p>
+    </div>
+  <% } %>
+
+  <form class="item" action="/" method="post">
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="sumbit" name="list" value= <%= listTitle %>>+</button>
+
+  </form>
+</div>
+
+
+  <!-- 这样左右符号加才能保证颜色这个tag能被传递 -->
+
+
+  <!-- <h1>kindofDay List</h1> -->
+
+
+
+</body>
+
+</html>
